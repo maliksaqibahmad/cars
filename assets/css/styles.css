@@ -643,6 +643,7 @@ img {
     border: none;
     outline: none;
     padding: 0.75rem;
+    margin: 0 0.50rem;
     border-radius: 0.75rem;
     background-color: var(--container-color);
     color: var(--white-color);
