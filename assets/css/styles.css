@@ -27,23 +27,30 @@
 }
 
     /*========== Colors ==========*/
-
-    .light {
+    /*Color mode HSL(hue, saturation, lightness)*/
+    .dark {
         --title-color: hsl(219, 8%, 95%);
         --text-color: hsl(219, 8%, 75%);
         --text-color-light: hsl(219, 4%, 55%);
         --white-color: #fff;
         --body-color: hsl(219, 4%, 4%);
         --container-color: hsl(219, 4%, 7%);
+        .logoo{
+        filter: none;
         }
-
-        .dark {
-        --title-color: hsl(219, 8%, 15%);
-        --text-color: hsl(219, 8%, 35%);
-        --text-color-light: hsl(219, 4%, 45%);
+        }
+        /*Light Colors*/
+        /* Light Mode Colors */
+        body /*Light*/ {
+        --title-color: hsl(219, 8%, 15%); /* Darker text color for better contrast on light background */
+        --text-color: hsl(219, 8%, 35%); /* Darker text color for better contrast on light background */
+        --text-color-light: hsl(219, 4%, 45%); /* Darker text color for better contrast on light background */
         --white-color: black;
-        --body-color: #f0f0f0;
-        --container-color: #e0e0e0;
+        --body-color: #f0f0f0; /* Light background color */
+        --container-color: #e0e0e0; /* Lighter container background color */
+        .logoo {
+            filter: invert(1);
+        }
         }
         
         #toggle__button {
@@ -83,7 +90,7 @@ body {
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 h1,
@@ -272,7 +279,7 @@ img {
 }
 
 .logo__main {
-    width: 2rem;
+    width: 2.5rem;
 }
 
 .home__title {
@@ -626,8 +633,6 @@ img {
     justify-content: center;
     column-gap: 1rem;
     margin-bottom: 3.5rem;
-    flex-wrap: wrap;
-    row-gap: 1rem;
 }
 
 .featured__item {
