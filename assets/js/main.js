@@ -1,89 +1,38 @@
-/*=============== Dark Mode================*/
-// JavaScript code to toggle between dark and light modes
+           /*=============== Dark Mode================*/
 
-// Function to toggle the mode
-function toggleMode() {
+    function toggleColorScheme() {
     const body = document.body;
-    
-    // Toggle the 'dark' class on the body element
-    body.classList.toggle('dark');
-    
-    // You can also save the current mode in localStorage if needed
-    const isDarkMode = body.classList.contains('dark');
-    localStorage.setItem('darkMode', isDarkMode);
-}
+    const currentColorScheme = body.classList.contains('dark') ? 'dark' : 'light';
+    const newColorScheme = currentColorScheme === 'light' ? 'dark' : 'light';
 
-// Function to initialize the mode based on localStorage
-function initializeMode() {
-    const isDarkMode = localStorage.getItem('darkMode');
-    const body = document.body;
-    
-    if (isDarkMode === 'true') {
-        // If 'darkMode' is set to 'true' in localStorage, enable dark mode
-        body.classList.add('dark');
-    } else {
-        // Otherwise, enable light mode (optional)
-        body.classList.remove('dark');
-    }
-}
-
-// Initialize the mode when the page loads
-initializeMode();
-
-// Add an event listener to the toggle button
-const toggleButton = document.getElementById('toggleButton'); // Replace 'toggleButton' with your actual button ID
-if (toggleButton) {
-    toggleButton.addEventListener('click', toggleMode);
-}
-
-// Check local storage for user's preferred mode and apply it
-const userPreferredMode = localStorage.getItem("mode");
-if (userPreferredMode) {
-  const root = document.documentElement;
-  root.setAttribute("data-mode", userPreferredMode);
-
-  if (userPreferredMode === "dark") {
-    toggleButton.classList.remove("ri-sun-line");
-    toggleButton.classList.add("ri-moon-line");
+    // Toggle the class on the <body> element
+    body.classList.remove(currentColorScheme);
+    body.classList.add(newColorScheme);
   }
-}
 
-const iconElement = document.getElementById("toggle__button");
+  // Add a click event listener to the button
+  const Toggle = document.getElementById('toggle__button');
+  Toggle.addEventListener('click', toggleColorScheme);
 
-        iconElement.addEventListener("click", function () {
-            if (iconElement.classList.contains("ri-sun-line")) {
-                iconElement.classList.remove("ri-sun-line");
-                iconElement.classList.add("ri-moon-line");
-            } else {
-                iconElement.classList.remove("ri-moon-line");
-                iconElement.classList.add("ri-sun-line");
-            }
-        });
-
-// Add click event listener to the button
-document.getElementById('toggle__button').addEventListener('click', toggleMode);
-
-/* Images color in light/dark mode*/
-const imageColor = document.getElementById("toggle__button");
-const logos = document.querySelectorAll(".logoo");
-
-imageColor.addEventListener("click", function () {
-    document.body.classList.toggle("light");
-
-    // Check if the light mode is active
-    const isLightMode = document.body.classList.contains("light");
-
-    // Apply or remove the color inversion filter to .logoo images
-    logos.forEach((logo) => {
-        if (isLightMode) {
-            logo.style.filter = "none";
-        } else {
-            logo.style.filter = "invert(1)"; // Remove the filter for dark mode
-        }
-    });
-});
-
-
+    // Function to toggle the color scheme and button icon
+    function toggleColorScheme() {
+        const body = document.body;
+        const currentColorScheme = body.classList.contains('dark') ? 'dark' : 'light';
+        const newColorScheme = currentColorScheme === 'light' ? 'dark' : 'light';
+    
+        // Toggle the class on the <body> element
+        body.classList.remove(currentColorScheme);
+        body.classList.add(newColorScheme);
+    
+        // Toggle the class on the button element
+        const Toggle = document.getElementById('toggle__button');
+        Toggle.classList.toggle('ri-moon-line');
+        Toggle.classList.toggle('ri-sun-line');
+      }
+    
+      // Add a click event listener to the button
+      const toggleButton = document.getElementById('toggle__button');
+      toggleButton.addEventListener('click', toggleColorScheme);
 
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById("nav-menu");
