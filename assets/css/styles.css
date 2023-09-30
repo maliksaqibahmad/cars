@@ -633,6 +633,8 @@ img {
     justify-content: center;
     column-gap: 1rem;
     margin-bottom: 3.5rem;
+    flex-wrap: wrap;
+    row-gap: 2rem;
 }
 
 .featured__item {
