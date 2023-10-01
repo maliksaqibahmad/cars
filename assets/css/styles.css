@@ -633,6 +633,8 @@ img {
     justify-content: center;
     column-gap: 1rem;
     margin-bottom: 3.5rem;
+    flex-wrap: wrap;
+    row-gap: 1rem;
 }
 
 .featured__item {
@@ -641,6 +643,7 @@ img {
     border: none;
     outline: none;
     padding: 0.75rem;
+    margin: 0 0.5rem;
     border-radius: 0.75rem;
     background-color: var(--container-color);
     color: var(--white-color);
