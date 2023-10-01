@@ -167,21 +167,21 @@ const sr = ScrollReveal({
 
 sr.reveal(`.home__title, .popular__container, .features__img, .featured__filters`);
 sr.reveal(`.home__subtitle`, {
-    delay: 0,
+    delay: 100,
 });
 sr.reveal(`.home__elec`, {
-    delay: 0,
+    delay: 100,
 });
 sr.reveal(`.home__img`, {
-    delay: 0,
+    delay: 100,
 });
 sr.reveal(`.home__car-data`, {
-    delay: 0,
-    interval: 0,
+    delay: 100,
+    interval: 200,
     origin: "bottom",
 });
 sr.reveal(`.home__button`, {
-    delay: 0,
+    delay: 100,
     origin: "bottom",
 });
 sr.reveal(`.about__group, .offer__data`, {
