@@ -161,27 +161,27 @@ const sr = ScrollReveal({
     origin: "top",
     distance: "60px",
     duration: 1200,
-    delay: 200,
+    delay: 400,
     // reset: true,
 });
 
 sr.reveal(`.home__title, .popular__container, .features__img, .featured__filters`);
 sr.reveal(`.home__subtitle`, {
-    delay: 100,
+    delay: 200,
 });
 sr.reveal(`.home__elec`, {
-    delay: 100,
+    delay: 200,
 });
 sr.reveal(`.home__img`, {
-    delay: 100,
+    delay: 200,
 });
 sr.reveal(`.home__car-data`, {
-    delay: 100,
+    delay: 200,
     interval: 200,
     origin: "bottom",
 });
 sr.reveal(`.home__button`, {
-    delay: 100,
+    delay: 200,
     origin: "bottom",
 });
 sr.reveal(`.about__group, .offer__data`, {
