@@ -34,6 +34,12 @@
       const toggleButton = document.getElementById('toggle__button');
       toggleButton.addEventListener('click', toggleColorScheme);
 
+      //Loading Spinner
+      window.addEventListener('load', function () {
+        const loaderContainer = document.querySelector('.loader-container');
+        loaderContainer.style.display = 'none';
+      });      
+
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById("nav-menu");
 const navToggle = document.getElementById("nav-toggle");
@@ -154,28 +160,28 @@ window.addEventListener("scroll", scrollActive);
 const sr = ScrollReveal({
     origin: "top",
     distance: "60px",
-    duration: 2500,
+    duration: 1200,
     delay: 200,
     // reset: true,
 });
 
 sr.reveal(`.home__title, .popular__container, .features__img, .featured__filters`);
 sr.reveal(`.home__subtitle`, {
-    delay: 500,
+    delay: 0,
 });
 sr.reveal(`.home__elec`, {
-    delay: 600,
+    delay: 0,
 });
 sr.reveal(`.home__img`, {
-    delay: 800,
+    delay: 0,
 });
 sr.reveal(`.home__car-data`, {
-    delay: 900,
-    interval: 100,
+    delay: 0,
+    interval: 0,
     origin: "bottom",
 });
 sr.reveal(`.home__button`, {
-    delay: 1000,
+    delay: 0,
     origin: "bottom",
 });
 sr.reveal(`.about__group, .offer__data`, {
